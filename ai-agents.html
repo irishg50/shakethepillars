@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Agents | Shake the Pillars</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        main {
+            padding-top: 60px;
+        }
+        
+        .page-header {
+            background-color: #2A4C3B;
+            color: white;
+            padding: 5rem 0 3rem;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .agent-card {
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .agent-content {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .agent-card h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #2A4C3B;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        
+        .agent-card p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .agent-card ul {
+            padding-left: 1.2rem;
+            margin-top: 1rem;
+            display: inline-block;
+            text-align: left;
+        }
+        
+        .agent-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .agent-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .agent-icon img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        
+        .capability-item {
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        
+        .capability-item h3 {
+            color: #2A4C3B;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+        
+        .process-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 2rem;
+        }
+        
+        .process-list li {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+        
+        .process-list strong {
+            color: #2A4C3B;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-item h3 {
+            color: #2A4C3B;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .agent-grid, 
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            list-style-position: outside;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.5rem;
+        }
+        
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="/" class="logo">Shake the Pillars AI Services</a>
+                <ul class="nav-links">
+                    <li><a href="/ai-agents.html">AI Agents</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>AI Business Agents</h1>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <p class="intro-text">AI Agents are intelligent assistants that help automate our business processes, analyzing data, optimizing content productions and improving customer interactions.</p>
+                <p class="intro-text">Each agent is designed to solve a specific business challenge while building your team's confidence with AI technology.</p>
+                
+                <p class="intro-text">Our AI Agents are more than just automation tools – they're intelligent partners that understand your business context and adapt to your specific needs.</p>
+                <p class="intro-text">Each agent combines advanced AI capabilities with industry best practices to deliver measurable results.</p>
+                
+                <div class="agent-grid">
+                    <div class="agent-card">
+                        <div class="agent-icon">
+                            <img src="/static/img/process_icon.png" alt="Process Automation">
+                        </div>
+                        <div class="agent-content">
+                            <h3>Process Automation</h3>
+                            <p>Analyze workflows and identify opportunities for automation and optimization.</p>
+                            <ul>
+                                <li>Identify bottlenecks and inefficiencies</li>
+                                <li>Automate routine business processes</li>
+                                <li>Optimize resource allocation</li>
+                                <li>Reduce manual work by 30-50%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="agent-card">
+                        <div class="agent-icon">
+                            <img src="/static/img/analytics_icon.png" alt="Data Analytics">
+                        </div>
+                        <div class="agent-content">
+                            <h3>Data Analytics</h3>
+                            <p>Transform business data into actionable insights and strategic recommendations.</p>
+                            <ul>
+                                <li>Analyze patterns in sales and operations</li>
+                                <li>Generate predictive forecasts</li>
+                                <li>Identify emerging trends</li>
+                                <li>Support data-driven decisions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="agent-card">
+                        <div class="agent-icon">
+                            <img src="/static/img/customers_icon.png" alt="Customer Service">
+                        </div>
+                        <div class="agent-content">
+                            <h3>Customer Service</h3>
+                            <p>Intelligent, 24/7 chatbots that handle inquiries and provide support.</p>
+                            <ul>
+                                <li>Handle common customer questions</li>
+                                <li>Provide product information</li>
+                                <li>Escalate complex issues to humans</li>
+                                <li>Learn from each interaction</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="agent-card">
+                        <div class="agent-icon">
+                            <img src="/static/img/ideas_icon.png" alt="Custom Solutions">
+                        </div>
+                        <div class="agent-content">
+                            <h3>Custom AI Agents</h3>
+                            <p>Tailored solutions that integrate with your existing workflows and systems.</p>
+                            <ul>
+                                <li>Designed for your specific needs</li>
+                                <li>Seamless integration with existing systems</li>
+                                <li>Continuous improvement based on feedback</li>
+                                <li>Support for unique business processes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Key Capabilities</h2>
+                <div class="capabilities-grid">
+                    <div class="capability-item">
+                        <h3>Natural Language Processing</h3>
+                        <p>Understand and process human language naturally, making interaction seamless and intuitive.</p>
+                    </div>
+                    <div class="capability-item">
+                        <h3>Adaptive Learning</h3>
+                        <p>Continuously improve performance by learning from interactions and feedback.</p>
+                    </div>
+                    <div class="capability-item">
+                        <h3>Context Awareness</h3>
+                        <p>Understand business context and industry-specific requirements.</p>
+                    </div>
+                    <div class="capability-item">
+                        <h3>Process Optimization</h3>
+                        <p>Identify and streamline inefficient workflows automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Why Choose AI Agents?</h2>
+                <ul class="benefits-list">
+                    <li>Quick to implement - most agents launch within 6-8 weeks</li>
+                    <li>Low-risk way to test AI solutions without disrupting operations</li>
+                    <li>Clear metrics and outcomes that demonstrate AI value</li>
+                    <li>Cost-effective, with minimal tech investment & integration</li>
+                    <li>Gain practical insights to guide your AI strategy</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Is AI safe to use with our business data?</h3>
+                        <p>We take data security seriously with strict protocols for data anonymization, encryption, and compliance with privacy standards.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What if the AI makes mistakes?</h3>
+                        <p>All AI agents include human oversight and validation processes with comprehensive testing and approval workflows.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Do we need technical expertise to run an AI Agent?</h3>
+                        <p>No specialized expertise is required. We provide user-friendly interfaces and comprehensive training.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Will AI replace our staff?</h3>
+                        <p>No – AI is designed to enhance, not replace, your team by automating routine tasks and providing decision support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p style="text-align: center">Ready to transform your business? Contact us at <a href="mailto:contact@shakethepillars.com">contact@shakethepillars.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shake the Pillars. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

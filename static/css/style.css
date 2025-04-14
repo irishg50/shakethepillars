@@ -1,0 +1,695 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #2A4C3B;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --forest-green: #2A4C3B;
+    --light-green: rgba(42, 76, 59, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    padding: 1rem 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--forest-green);
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 0 4rem;
+    background-color: var(--forest-green);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero.simple {
+    padding: 6rem 0 3rem;
+    text-align: center;
+}
+
+.hero.simple h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    color: var(--white);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 200, 0.2));
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 20px rgba(0, 255, 200, 0.1));
+    }
+    to {
+        filter: drop-shadow(0 0 30px rgba(0, 255, 200, 0.3));
+    }
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    color: var(--forest-green);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid var(--white);
+}
+
+.hero .cta-button:hover {
+    background-color: transparent;
+    color: var(--white);
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 3px solid var(--forest-green);
+}
+
+.service-icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+}
+
+.service-icon.small {
+    width: 48px;
+    height: 48px;
+    margin: 0;
+}
+
+.service-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.service-card h5 {
+    color: var(--forest-green);
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.service-card p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* About Section */
+#about {
+    padding: 4rem 0;
+    background-color: var(--light-green);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.profile-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.profile-info {
+    flex: 2;
+}
+
+.profile-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.role {
+    color: var(--forest-green);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-email {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.contact-email a {
+    color: var(--forest-green);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact-email a:hover {
+    border-color: var(--forest-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--forest-green);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Utility Classes */
+.white-bg {
+    background-color: #ffffff !important;
+}
+
+/* AI Agents Section */
+#ai-agents {
+    padding: 4rem 0;
+}
+
+.pilot-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-subtitle {
+    color: var(--forest-green);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.agent-content-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    background-color: #ffffff;
+}
+
+.agent-main-content {
+    flex: 2;
+    background-color: #ffffff;
+}
+
+.agent-intro {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.agent-description {
+    margin-bottom: 2rem;
+}
+
+.agent-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.agent-option {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.agent-option:hover {
+    transform: translateY(-5px);
+    border-bottom: 3px solid var(--forest-green);
+}
+
+.agent-icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+}
+
+.agent-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.agent-option h4 {
+    color: var(--forest-green);
+    margin: 1rem 0 0 0;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.agent-benefits-wrapper {
+    flex: 1;
+}
+
+.benefits-box {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+.benefits-title {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefits-list li:before {
+    content: "✓";
+    color: var(--forest-green);
+    position: absolute;
+    left: 0;
+}
+
+.benefits-cta {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.benefits-cta-title {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design for AI Agents Section */
+@media (max-width: 768px) {
+    .agent-content-wrapper {
+        flex-direction: column;
+    }
+
+    .agent-options {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-box {
+        margin-top: 2rem;
+    }
+}
+
+/* Responsive adjustments for hero section */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    .hero-image {
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 300px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+/* FAQ Section Styles */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-subtitle {
+    color: var(--forest-green);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.faq-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    color: var(--text-color);
+}
+
+.faq-answer p {
+    margin-bottom: 1rem;
+}
+
+.faq-answer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.faq-answer li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.faq-answer li:before {
+    content: "✓";
+    color: var(--forest-green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .faq-grid {
+        gap: 1.5rem;
+    }
+    
+    .faq-item {
+        padding: 1.5rem;
+    }
+}
+
+/* AI Agent Feature Styles */
+.agent-feature {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    border-radius: 12px;
+    padding: 2.5rem;
+}
+
+.agent-feature-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.agent-feature-icon .icon-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.agent-feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.agent-feature-content {
+    flex: 1;
+}
+
+.agent-feature-content h3 {
+    color: var(--forest-green);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.agent-feature-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.agent-capabilities,
+.agent-applications,
+.implementation-process {
+    margin-bottom: 2rem;
+}
+
+.agent-feature-content h4 {
+    color: var(--forest-green);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 0.5rem;
+}
+
+.agent-feature-content ul,
+.agent-feature-content ol {
+    padding-left: 1.5rem;
+}
+
+.agent-feature-content li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.agent-feature-content strong {
+    color: var(--forest-green);
+}
+
+.implementation-process ol {
+    counter-reset: implementation-steps;
+}
+
+.implementation-process li {
+    counter-increment: implementation-steps;
+    position: relative;
+}
+
+.implementation-process li::before {
+    content: counter(implementation-steps);
+    color: var(--white);
+    background: var(--forest-green);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: absolute;
+    left: -2rem;
+    top: 0;
+}
+
+@media (max-width: 968px) {
+    .agent-feature {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .agent-feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .agent-feature-icon .icon-wrapper {
+        padding: 6px;
+    }
+
+    .agent-feature-content h3 {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .agent-feature {
+        padding: 1.5rem;
+    }
+
+    .agent-feature-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .agent-feature-content p {
+        font-size: 1rem;
+    }
+} 

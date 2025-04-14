@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Services | Shake the Pillars</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        main {
+            padding-top: 60px;
+        }
+        
+        .page-header {
+            background-color: #2A4C3B;
+            color: white;
+            padding: 5rem 0 3rem;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .service-content {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .service-card h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #2A4C3B;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        
+        .service-card p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card ul {
+            padding-left: 1.2rem;
+            margin-top: 1rem;
+            display: inline-block;
+            text-align: left;
+        }
+        
+        .service-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .service-icon img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        
+        .testimonials-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            margin: 3rem 0;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #2A4C3B;
+        }
+        
+        .testimonial-company {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .process-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 2rem;
+        }
+        
+        .process-list li {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+        
+        .process-list strong {
+            color: #2A4C3B;
+        }
+        
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            list-style-position: outside;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.5rem;
+        }
+        
+        .contact-cta {
+            background-color: #2A4C3B;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .contact-cta h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #fff;
+            color: #2A4C3B;
+            font-weight: bold;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid, 
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="/" class="logo">Shake the Pillars AI Services</a>
+                <ul class="nav-links">
+                    <li><a href="/ai-agents.html">AI Agents</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>AI Services</h1>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">AI Services for Business</h2>
+                <p class="intro-text">At Shake the Pillars, we provide comprehensive AI services designed to help your business thrive in the digital age. Our approach combines strategic consulting with practical implementation to ensure you get the maximum value from AI technology.</p>
+                
+                <p class="intro-text">Whether you're just beginning your AI journey or looking to enhance your existing capabilities, our services are tailored to meet your specific business needs and objectives.</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/static/img/strategy_icon.png" alt="Strategy icon">
+                        </div>
+                        <div class="service-content">
+                            <h3>AI Strategy Consulting</h3>
+                            <p>Not sure where to start with AI? Our strategic consulting services help identify the best opportunities for AI implementation in your business.</p>
+                            <ul>
+                                <li>AI readiness assessment</li>
+                                <li>Opportunity identification</li>
+                                <li>Roadmap development</li>
+                                <li>ROI analysis and planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/static/img/customers_icon.png" alt="Workshop icon">
+                        </div>
+                        <div class="service-content">
+                            <h3>AI Implementation Workshops</h3>
+                            <p>Our comprehensive workshops provide your team with the knowledge and tools needed to successfully implement AI solutions in your organization.</p>
+                            <ul>
+                                <li>Executive AI education</li>
+                                <li>Hands-on AI capabilities training</li>
+                                <li>Project planning sessions</li>
+                                <li>Team skill-building exercises</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/static/img/ideas_icon.png" alt="Custom Solutions icon">
+                        </div>
+                        <div class="service-content">
+                            <h3>Custom AI Agents</h3>
+                            <p>We develop tailored AI Agents that integrate seamlessly with your existing workflows, automating tasks and enhancing productivity.</p>
+                            <ul>
+                                <li>Bespoke AI solution development</li>
+                                <li>Business-specific customization</li>
+                                <li>Workflow integration design</li>
+                                <li>Performance monitoring tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/static/img/process_icon.png" alt="Integration icon">
+                        </div>
+                        <div class="service-content">
+                            <h3>AI Integration Services</h3>
+                            <p>We design custom integrations to connect AI solutions with your existing systems and processes, ensuring smooth implementation and maximum ROI.</p>
+                            <ul>
+                                <li>API development and integration</li>
+                                <li>Legacy system compatibility</li>
+                                <li>Data pipeline configuration</li>
+                                <li>Seamless workflow connections</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Service Approach</h2>
+                <p class="intro-text">We follow a structured approach to ensure successful AI implementation that delivers measurable business value.</p>
+                
+                <ol class="process-list">
+                    <li>
+                        <strong>Discovery & Assessment:</strong> We begin by understanding your business objectives, challenges, and current technology landscape.
+                    </li>
+                    <li>
+                        <strong>Strategy Development:</strong> Based on our assessment, we develop a tailored AI strategy that aligns with your business goals.
+                    </li>
+                    <li>
+                        <strong>Solution Design:</strong> We design AI solutions that address your specific challenges and integrate with your existing systems.
+                    </li>
+                    <li>
+                        <strong>Implementation:</strong> Our team works closely with yours to implement the solutions, ensuring minimal disruption.
+                    </li>
+                    <li>
+                        <strong>Training & Support:</strong> We provide comprehensive training and ongoing support to ensure your team can effectively use the new AI capabilities.
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Our Services?</h2>
+                <ul class="benefits-list">
+                    <li>Expertise in both AI technology and business strategy</li>
+                    <li>Practical, results-focused approach to AI implementation</li>
+                    <li>Customized solutions tailored to your specific business needs</li>
+                    <li>Comprehensive support throughout the implementation process</li>
+                    <li>Measurable outcomes and clear ROI metrics</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+                <h2>Ready to Transform Your Business with AI?</h2>
+                <p style="margin-bottom: 2rem;">Let's discuss how our AI services can help your organization innovate and grow.</p>
+                <a href="/contact.html" class="cta-button">Schedule a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shake the Pillars. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

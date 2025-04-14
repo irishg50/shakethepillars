@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Shake the Pillars</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        main {
+            padding-top: 60px;
+        }
+        
+        .page-header {
+            background-color: #2A4C3B;
+            color: white;
+            padding: 5rem 0 3rem;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            padding: 1.5rem;
+            width: 100%;
+        }
+        
+        .contact-info h3 {
+            color: #2A4C3B;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            color: #2A4C3B;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .contact-form {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background-color: #2A4C3B;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: #1a3c2b;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-item h3 {
+            color: #2A4C3B;
+            margin-bottom: 0.5rem;
+        }
+        
+        .office-locations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .office-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .office-card h3 {
+            color: #2A4C3B;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .office-locations {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="/" class="logo">Shake the Pillars AI Services</a>
+                <ul class="nav-links">
+                    <li><a href="/ai-agents.html">AI Agents</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <p class="intro-text">We're excited to hear from you and learn how we can help transform your business with AI. Whether you have a specific project in mind or just want to explore the possibilities, we are ready to assist.</p>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:agents@shakethepillars.com">agents@shakethepillars.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <strong>Business Hours</strong><br>
+                                Monday - Friday: 9am - 5pm EST
+                            </div>
+                        </div>
+   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>How quickly can you respond to inquiries?</h3>
+                        <p>We aim to respond to all inquiries within 24 business hours.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Do you offer virtual consultations?</h3>
+                        <p>Yes, we offer virtual consultations via Zoom, Microsoft Teams, or your preferred platform.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What information should I prepare for an initial consultation?</h3>
+                        <p>It's helpful to have a general understanding of your business challenges, current technology landscape, and what you hope to achieve with AI solutions.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shake the Pillars. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will contact you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 
